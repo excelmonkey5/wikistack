@@ -1,4 +1,8 @@
 const router = require("express").Router();
-const client = require("../db");
+const userList = require("../views/userList");
 
-module.exports = routers;
+router.get("/", (req, res, next) => {
+    res.send('user list placeholder');
+});
+
+module.exports = router;

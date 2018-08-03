@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const client = require("../db");
+const addPage = require("../views/addPage");
 
 router.get("/", (req, res, next) => {
   res.send('got to get /wiki');
@@ -11,7 +11,7 @@ router.post("/", (req, res, next) => {
 });
 
 router.get('/add', (req, res, next) => {
-  res.send('got to GET /wiki/add');
+  res.send(addPage());
 });
 
-modules.exports = router;
+module.exports = router;

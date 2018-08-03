@@ -18,7 +18,7 @@ app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.urlencoded({extended: false}))
 
 app.use("/wiki", wikiRouter);
-app.use("/user", userRouter);
+app.use("/users", userRouter);
 
 
 const PORT = 3000;
