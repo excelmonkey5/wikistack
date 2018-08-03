@@ -12,16 +12,31 @@ const Page = db.define('page', {
         allowNull: false
     },
     content: {
-        type: Sequelize.STRING,
+        type: Sequelize.TEXT,
         allowNull: false
     },
     status: {
-        type: Sequelize.BOOLEAN,
+        type: Sequelize.ENUM('open', 'closed')
+        }
+});
+
+// await db.sync();
+
+const User = db.define('user', {
+    name: {
+        type: Sequelize.STRING,
+        allowNull: false
+    },
+    email: {
+        type: Sequelize.STRING,
         allowNull: false
     }
+});
 
-})
+// await db.sync();
+
 
 module.exports = {
-    db
-}
+    db,
+    Page, User
+};
