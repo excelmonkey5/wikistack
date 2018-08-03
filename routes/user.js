@@ -2,7 +2,13 @@ const router = require("express").Router();
 const userList = require("../views/userList");
 
 router.get("/", (req, res, next) => {
-    res.send('user list placeholder');
+   res.redirect('/wiki');
 });
+
+
+// router.get("/", (req, res, next) => {
+//     const data = User.findAll();
+//     res.send(data.rows[0]);
+// });
 
 module.exports = router;
